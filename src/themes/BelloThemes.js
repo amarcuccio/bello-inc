@@ -14,7 +14,7 @@ const BelloLight = createMuiTheme({
 const BelloDark = createMuiTheme({
   palette: {
     primary: {
-      main: '#161616',
+      main: '#1A202C',
     },
     secondary: {
       main: '#228B22',
