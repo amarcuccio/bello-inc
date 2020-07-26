@@ -2,18 +2,25 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
 import Toolbar from '@material-ui/core/Toolbar';
+import { Squash as Hamburger } from 'hamburger-react';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Brightness4, Brightness7 } from '@material-ui/icons';
-import styles from './Navbar.module.css';
+import { withStyles } from '@material-ui/core/styles';
+import styles from '../styles/NavbarStyles';
 
 const Navbar = (props) => {
-  const { themeState, themeChange } = props;
+  const { classes, themeState, themeChange } = props;
   return (
     <AppBar position="static">
       <Container>
-        <Toolbar className={styles.toolbar}>
-          <Typography variant="h6" className={styles.title}>
+        <Toolbar className={classes.toolbar}>
+          <Hamburger
+            distance="sm"
+            size="28"
+            color={themeState ? '#FFFFFF' : '#000000'}
+          />
+          <Typography variant="h6" className={classes.title}>
             Bello & Co Inc.
           </Typography>
           <Tooltip title="Toggle light/dark theme">
@@ -29,4 +36,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+export default withStyles(styles)(Navbar);
