@@ -5,7 +5,7 @@ const styles = (theme) => ({
   title: {
     flexGrow: 1,
     marginLeft: '20px',
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
       fontSize: '18px !important',
       marginLeft: '0px',

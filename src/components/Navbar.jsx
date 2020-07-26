@@ -2,7 +2,8 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
 import Toolbar from '@material-ui/core/Toolbar';
-import { Squash as Hamburger } from 'hamburger-react';
+import Hidden from '@material-ui/core/Hidden';
+import { Squeeze as Hamburger } from 'hamburger-react';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Brightness4, Brightness7 } from '@material-ui/icons';
@@ -15,11 +16,14 @@ const Navbar = (props) => {
     <AppBar position="static">
       <Container>
         <Toolbar className={classes.toolbar}>
-          <Hamburger
-            distance="sm"
-            size="28"
-            color={themeState ? '#FFFFFF' : '#000000'}
-          />
+          <Hidden mdUp>
+            <Hamburger
+              className={classes.hamburger}
+              distance="sm"
+              size="28"
+              color={themeState ? '#FFFFFF' : '#000000'}
+            />
+          </Hidden>
           <Typography variant="h6" className={classes.title}>
             Bello & Co Inc.
           </Typography>
