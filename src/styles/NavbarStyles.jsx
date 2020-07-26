@@ -1,6 +1,9 @@
 const styles = (theme) => ({
   toolbar: {
     height: '80px',
+    [theme.breakpoints.down('sm')]: {
+      height: '60px',
+    },
   },
   title: {
     flexGrow: 1,

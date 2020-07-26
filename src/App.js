@@ -9,6 +9,7 @@ const App = () => {
   const handleThemeChange = () => {
     setDarkState(!darkState);
   };
+
   return (
     <>
       <ThemeProvider theme={darkState ? BelloDark : BelloLight}>

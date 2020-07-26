@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Drawer from './Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,32 +12,42 @@ import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/NavbarStyles';
 
 const Navbar = (props) => {
+  const [isOpen, setOpen] = useState(false);
   const { classes, themeState, themeChange } = props;
+  const handleSetOpen = () => {
+    setOpen(!isOpen);
+  };
+
   return (
-    <AppBar position="static">
-      <Container>
-        <Toolbar className={classes.toolbar}>
-          <Hidden mdUp>
-            <Hamburger
-              className={classes.hamburger}
-              distance="sm"
-              size="28"
-              color={themeState ? '#FFFFFF' : '#000000'}
-            />
-          </Hidden>
-          <Typography variant="h6" className={classes.title}>
-            Bello & Co Inc.
-          </Typography>
-          <Tooltip title="Toggle light/dark theme">
-            {themeState ? (
-              <Brightness7 onClick={themeChange} />
-            ) : (
-              <Brightness4 onClick={themeChange} />
-            )}
-          </Tooltip>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <div>
+      {isOpen && <Drawer open={isOpen} close={handleSetOpen} />}
+      <AppBar position="static">
+        <Container>
+          <Toolbar className={classes.toolbar}>
+            <Hidden mdUp>
+              <Hamburger
+                className={classes.hamburger}
+                distance="sm"
+                size="28"
+                color={themeState ? '#FFFFFF' : '#000000'}
+                toggled={isOpen}
+                toggle={setOpen}
+              />
+            </Hidden>
+            <Typography variant="h6" className={classes.title}>
+              Bello & Co Inc.
+            </Typography>
+            <Tooltip title="Toggle light/dark theme">
+              {themeState ? (
+                <Brightness7 onClick={themeChange} />
+              ) : (
+                <Brightness4 onClick={themeChange} />
+              )}
+            </Tooltip>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </div>
   );
 };
 

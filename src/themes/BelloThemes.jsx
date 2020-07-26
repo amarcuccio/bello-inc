@@ -23,6 +23,7 @@ const BelloDark = createMuiTheme({
     type: 'dark',
     background: {
       default: '#1A202C',
+      paper: '#1A202C',
     },
   },
 });
