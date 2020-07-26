@@ -1,9 +1,10 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
+import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Switch from '@material-ui/core/Switch';
+import Tooltip from '@material-ui/core/Tooltip';
+import { Brightness4, Brightness7 } from '@material-ui/icons';
 import styles from './Navbar.module.css';
 
 const Navbar = (props) => {
@@ -15,7 +16,13 @@ const Navbar = (props) => {
           <Typography variant="h6" className={styles.title}>
             Bello & Co Inc.
           </Typography>
-          <Switch checked={themeState} onChange={themeChange} />
+          <Tooltip title="Toggle light/dark theme">
+            {themeState ? (
+              <Brightness7 onClick={themeChange} />
+            ) : (
+              <Brightness4 onClick={themeChange} />
+            )}
+          </Tooltip>
         </Toolbar>
       </Container>
     </AppBar>

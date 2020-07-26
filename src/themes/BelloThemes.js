@@ -8,6 +8,7 @@ const BelloLight = createMuiTheme({
     secondary: {
       main: '#228B22',
     },
+    type: 'light',
   },
 });
 
@@ -18,6 +19,10 @@ const BelloDark = createMuiTheme({
     },
     secondary: {
       main: '#228B22',
+    },
+    type: 'dark',
+    background: {
+      default: '#1A202C',
     },
   },
 });
