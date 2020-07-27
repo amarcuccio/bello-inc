@@ -31,7 +31,7 @@ const Navbar = (props) => {
                 size="28"
                 color={themeState ? '#FFFFFF' : '#000000'}
                 toggled={isOpen}
-                toggle={setOpen}
+                toggle={handleSetOpen}
               />
             </Hidden>
             <Typography variant="h6" className={classes.title}>
