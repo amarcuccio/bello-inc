@@ -4,8 +4,9 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { BelloLight, BelloDark } from './themes/BelloThemes';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-const App = () => {
+const App = (props) => {
   const [darkState, setDarkState] = useState(false);
   const handleThemeChange = () => {
     setDarkState(!darkState);
@@ -22,6 +23,7 @@ const App = () => {
       <ThemeProvider theme={darkState ? BelloDark : BelloLight}>
         <CssBaseline />
         <Navbar themeState={darkState} themeChange={handleThemeChange} />
+        <Footer />
       </ThemeProvider>
     </>
   );
