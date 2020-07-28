@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HeaderElevation } from '../config/ScrollEvents';
-import Drawer from './Drawer';
+import NavDrawer from './NavDrawer';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -20,8 +20,14 @@ const Navbar = (props) => {
   };
 
   return (
-    <div>
-      {isOpen && <Drawer open={isOpen} close={handleSetOpen} />}
+    <div className={classes.root}>
+      {isOpen && (
+        <NavDrawer
+          themeState={themeState}
+          open={isOpen}
+          close={handleSetOpen}
+        />
+      )}
       <HeaderElevation {...props}>
         <AppBar>
           <Container>

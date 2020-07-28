@@ -1,4 +1,7 @@
 const styles = (theme) => ({
+  root: {
+    display: 'flex',
+  },
   toolbar: {
     height: '80px',
     [theme.breakpoints.down('sm')]: {
