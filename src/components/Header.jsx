@@ -8,9 +8,10 @@ import Hidden from '@material-ui/core/Hidden';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
-import { Brightness4, Brightness7 } from '@material-ui/icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { withStyles } from '@material-ui/core/styles';
-import styles from '../styles/NavbarStyles';
+import styles from '../styles/HeaderStyles';
 
 const Navbar = (props) => {
   const [isOpen, setOpen] = useState(false);
@@ -41,9 +42,17 @@ const Navbar = (props) => {
               </Typography>
               <Tooltip title="Toggle light/dark theme">
                 {themeState ? (
-                  <Brightness7 onClick={themeChange} />
+                  <FontAwesomeIcon
+                    icon={faSun}
+                    className={classes.themeIcon}
+                    onClick={themeChange}
+                  />
                 ) : (
-                  <Brightness4 onClick={themeChange} />
+                  <FontAwesomeIcon
+                    icon={faMoon}
+                    className={classes.themeIcon}
+                    onClick={themeChange}
+                  />
                 )}
               </Tooltip>
             </Toolbar>

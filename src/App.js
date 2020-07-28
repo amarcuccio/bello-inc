@@ -3,7 +3,7 @@ import { Mode, useLightSwitch } from 'use-light-switch';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { BelloLight, BelloDark } from './themes/BelloThemes';
-import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
 const App = (props) => {
@@ -22,7 +22,7 @@ const App = (props) => {
     <>
       <ThemeProvider theme={darkState ? BelloDark : BelloLight}>
         <CssBaseline />
-        <Navbar themeState={darkState} themeChange={handleThemeChange} />
+        <Header themeState={darkState} themeChange={handleThemeChange} />
         <Footer />
       </ThemeProvider>
     </>
