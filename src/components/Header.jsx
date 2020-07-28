@@ -7,7 +7,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Hidden from '@material-ui/core/Hidden';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import Typography from '@material-ui/core/Typography';
-import Tooltip from '@material-ui/core/Tooltip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { withStyles } from '@material-ui/core/styles';
@@ -29,7 +28,6 @@ const Navbar = (props) => {
             <Toolbar className={classes.toolbar}>
               <Hidden mdUp>
                 <Hamburger
-                  className={classes.hamburger}
                   distance="sm"
                   size="28"
                   color={themeState ? '#FFFFFF' : '#000000'}
@@ -40,21 +38,19 @@ const Navbar = (props) => {
               <Typography variant="h6" className={classes.title}>
                 Bello & Co Inc.
               </Typography>
-              <Tooltip title="Toggle light/dark theme">
-                {themeState ? (
-                  <FontAwesomeIcon
-                    icon={faSun}
-                    className={classes.themeIcon}
-                    onClick={themeChange}
-                  />
-                ) : (
-                  <FontAwesomeIcon
-                    icon={faMoon}
-                    className={classes.themeIcon}
-                    onClick={themeChange}
-                  />
-                )}
-              </Tooltip>
+              {themeState ? (
+                <FontAwesomeIcon
+                  icon={faSun}
+                  className={classes.themeIcon}
+                  onClick={themeChange}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faMoon}
+                  className={classes.themeIcon}
+                  onClick={themeChange}
+                />
+              )}
             </Toolbar>
           </Container>
         </AppBar>

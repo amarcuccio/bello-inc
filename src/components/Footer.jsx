@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookSquare,
@@ -14,15 +14,19 @@ const Footer = (props) => {
   return (
     <div className={classes.root}>
       <footer className={classes.footer}>
-        <Container>
-          <Typography variant="body1">
-            © Copyright Bello & Co Inc. {new Date().getFullYear()}
-          </Typography>
-          <Typography variant="body1">
-            <FontAwesomeIcon icon={faFacebookSquare} />
-            <FontAwesomeIcon icon={faLinkedin} />
-          </Typography>
-        </Container>
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <Typography variant="body2" align="center">
+              © Copyright Bello & Co Inc.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Typography variant="body2" align="center">
+              <FontAwesomeIcon icon={faFacebookSquare} />
+              <FontAwesomeIcon icon={faLinkedin} />
+            </Typography>
+          </Grid>
+        </Grid>
       </footer>
     </div>
   );

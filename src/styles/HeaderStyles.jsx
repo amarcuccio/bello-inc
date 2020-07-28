@@ -17,6 +17,9 @@ const styles = (theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: '18px',
     },
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
 });
 
