@@ -7,6 +7,8 @@ const styles = (theme) => ({
     [theme.breakpoints.down('sm')]: {
       height: '60px',
     },
+    borderBottom:
+      theme.palette.type === 'light' ? '1px solid black' : '1px solid white',
   },
   appbar: {
     zIndex: '1500',

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { HeaderElevation } from '../config/ScrollEvents';
 import NavDrawer from './NavDrawer';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
@@ -21,39 +20,37 @@ const Navbar = (props) => {
   return (
     <div className={classes.root}>
       {isOpen && <NavDrawer open={isOpen} close={handleSetOpen} />}
-      <HeaderElevation {...props}>
-        <AppBar className={classes.appbar}>
-          <Container>
-            <Toolbar className={classes.toolbar}>
-              <Hidden mdUp>
-                <Hamburger
-                  distance="sm"
-                  size="28"
-                  color={themeState ? '#FFFFFF' : '#000000'}
-                  toggled={isOpen}
-                  toggle={handleSetOpen}
-                />
-              </Hidden>
-              <Typography variant="h6" className={classes.title}>
-                Bello & Co Inc.
-              </Typography>
-              {themeState ? (
-                <FontAwesomeIcon
-                  icon={'sun'}
-                  className={classes.themeIcon}
-                  onClick={themeChange}
-                />
-              ) : (
-                <FontAwesomeIcon
-                  icon={'moon'}
-                  className={classes.themeIcon}
-                  onClick={themeChange}
-                />
-              )}
-            </Toolbar>
-          </Container>
-        </AppBar>
-      </HeaderElevation>
+      <AppBar className={classes.appbar} elevation={0}>
+        <Container>
+          <Toolbar className={classes.toolbar}>
+            <Hidden mdUp>
+              <Hamburger
+                distance="sm"
+                size="28"
+                color={themeState ? '#FFFFFF' : '#000000'}
+                toggled={isOpen}
+                toggle={handleSetOpen}
+              />
+            </Hidden>
+            <Typography variant="h6" className={classes.title}>
+              Bello & Co Inc.
+            </Typography>
+            {themeState ? (
+              <FontAwesomeIcon
+                icon={'sun'}
+                className={classes.themeIcon}
+                onClick={themeChange}
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={'moon'}
+                className={classes.themeIcon}
+                onClick={themeChange}
+              />
+            )}
+          </Toolbar>
+        </Container>
+      </AppBar>
     </div>
   );
 };

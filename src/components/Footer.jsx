@@ -11,7 +11,7 @@ const Footer = (props) => {
   return (
     <div className={classes.root}>
       <Container className={classes.footer}>
-        <Grid container justify="space-between">
+        <Grid container justify="space-between" className={classes.grid}>
           <Grid
             item
             xs={12}

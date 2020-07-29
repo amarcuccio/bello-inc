@@ -19,15 +19,15 @@ const BelloLight = createMuiTheme({
 const BelloDark = createMuiTheme({
   palette: {
     primary: {
-      main: '#1A202C',
+      main: '#1F232D',
     },
     secondary: {
       main: '#228B22',
     },
     type: 'dark',
     background: {
-      default: '#1A202C',
-      paper: '#1A202C',
+      default: '#1F232D',
+      paper: '#1F232D',
     },
   },
 });

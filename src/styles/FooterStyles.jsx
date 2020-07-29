@@ -5,8 +5,10 @@ const styles = (theme) => ({
     minHeight: '100vh',
   },
   footer: {
-    padding: theme.spacing(3, 2),
     marginTop: 'auto',
+  },
+  grid: {
+    padding: theme.spacing(3, 2),
     borderTop:
       theme.palette.type === 'light' ? '1px solid black' : '1px solid white',
   },
