@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
+import Social from './Social';
 import Typography from '@material-ui/core/Typography';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/FooterStyles';
 
@@ -21,30 +21,7 @@ const Footer = (props) => {
           >
             <Typography variant="body2">© Copyright Bello & Co Inc.</Typography>
           </Grid>
-          <Grid item xs={12} md={3} align="center" className={classes.social}>
-            <Typography variant="body2">
-              <FontAwesomeIcon
-                icon={['fab', 'facebook-f']}
-                className={classes.footerIcon}
-                size="lg"
-              />
-              <FontAwesomeIcon
-                icon={['fab', 'twitter']}
-                className={classes.footerIcon}
-                size="lg"
-              />
-              <FontAwesomeIcon
-                icon={['fab', 'linkedin-in']}
-                className={classes.footerIcon}
-                size="lg"
-              />
-              <FontAwesomeIcon
-                icon={'envelope'}
-                className={classes.footerIcon}
-                size="lg"
-              />
-            </Typography>
-          </Grid>
+          <Social icons={['facebook-f', 'twitter', 'linkedin-in']} />
         </Grid>
       </Container>
     </div>
