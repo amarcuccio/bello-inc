@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Mode, useLightSwitch } from 'use-light-switch';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { BelloLight, BelloDark } from './themes/BelloThemes';
@@ -23,11 +25,28 @@ const App = (props) => {
       : setDarkState(false);
   }, [detectUserThemePref]);
 
+  const [isOpen, setOpen] = useState(false);
+  const handleSetOpen = () => {
+    setOpen(!isOpen);
+  };
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+  useEffect(() => {
+    if (isDesktop) {
+      setOpen(false);
+    }
+  }, [isDesktop]);
+
   return (
     <>
       <ThemeProvider theme={darkState ? BelloDark : BelloLight}>
         <CssBaseline />
-        <Header themeState={darkState} themeChange={handleThemeChange} />
+        <Header
+          themeState={darkState}
+          themeHandler={handleThemeChange}
+          drawerState={isOpen}
+          drawerHandler={handleSetOpen}
+        />
         <Footer />
       </ThemeProvider>
     </>
