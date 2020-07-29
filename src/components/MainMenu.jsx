@@ -6,7 +6,9 @@ const MainMenu = (props) => {
   return (
     <div>
       {menuItems.map((item, index) => (
-        <Button key={index}>{item}</Button>
+        <Button key={index} aria-label={item}>
+          {item}
+        </Button>
       ))}
     </div>
   );

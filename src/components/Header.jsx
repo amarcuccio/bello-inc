@@ -42,6 +42,7 @@ const Header = (props) => {
                 color={themeState ? '#FFFFFF' : '#000000'}
                 toggled={isOpen}
                 toggle={handleSetOpen}
+                aria-label="Open/close navigation drawer."
               />
             </Hidden>
             <Typography variant="h6" className={classes.title}>
@@ -51,7 +52,10 @@ const Header = (props) => {
               <MainMenu menuItems={MenuItems} />
             </Hidden>
             <Box className={classes.iconContainer}>
-              <IconButton onClick={themeChange}>
+              <IconButton
+                onClick={themeChange}
+                aria-label="Toggle light/dark theme."
+              >
                 {themeState ? (
                   <FontAwesomeIcon icon={'sun'} className={classes.themeIcon} />
                 ) : (
