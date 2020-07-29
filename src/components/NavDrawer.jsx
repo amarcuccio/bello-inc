@@ -14,6 +14,8 @@ const NavDrawer = (props) => {
         open={open}
         onClose={close}
         classes={{ paper: classes.drawerPaper }}
+        anchor="bottom"
+        SlideProps={{ direction: 'up' }}
       >
         <Toolbar />
         <div>

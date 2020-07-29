@@ -5,6 +5,10 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { BelloLight, BelloDark } from './themes/BelloThemes';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faSun, faMoon, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+library.add(fab, faSun, faMoon, faEnvelope);
 
 const App = (props) => {
   const [darkState, setDarkState] = useState(false);

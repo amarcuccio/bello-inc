@@ -8,7 +8,6 @@ import Hidden from '@material-ui/core/Hidden';
 import { Squeeze as Hamburger } from 'hamburger-react';
 import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/HeaderStyles';
 
@@ -40,13 +39,13 @@ const Navbar = (props) => {
               </Typography>
               {themeState ? (
                 <FontAwesomeIcon
-                  icon={faSun}
+                  icon={'sun'}
                   className={classes.themeIcon}
                   onClick={themeChange}
                 />
               ) : (
                 <FontAwesomeIcon
-                  icon={faMoon}
+                  icon={'moon'}
                   className={classes.themeIcon}
                   onClick={themeChange}
                 />
