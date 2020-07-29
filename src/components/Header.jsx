@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import NavDrawer from './NavDrawer';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
@@ -14,12 +16,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/HeaderStyles';
 
-const Navbar = (props) => {
+const Header = (props) => {
   const [isOpen, setOpen] = useState(false);
   const { classes, themeState, themeChange } = props;
   const handleSetOpen = () => {
     setOpen(!isOpen);
   };
+  const isDesktop = useMediaQuery((theme) => theme.breakpoints.up('md'));
+  useEffect(() => {
+    if (isDesktop) {
+      setOpen(false);
+    }
+  }, [isDesktop]);
 
   return (
     <div className={classes.root}>
@@ -43,18 +51,13 @@ const Navbar = (props) => {
               <MainMenu menuItems={MenuItems} />
             </Hidden>
             <Box className={classes.iconContainer}>
-              <IconButton>
+              <IconButton onClick={themeChange}>
                 {themeState ? (
-                  <FontAwesomeIcon
-                    icon={'sun'}
-                    className={classes.themeIcon}
-                    onClick={themeChange}
-                  />
+                  <FontAwesomeIcon icon={'sun'} className={classes.themeIcon} />
                 ) : (
                   <FontAwesomeIcon
                     icon={'moon'}
                     className={classes.themeIcon}
-                    onClick={themeChange}
                   />
                 )}
               </IconButton>
@@ -66,4 +69,4 @@ const Navbar = (props) => {
   );
 };
 
-export default withStyles(styles)(Navbar);
+export default withStyles(styles)(Header);
