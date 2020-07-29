@@ -42,7 +42,7 @@ const Navbar = (props) => {
             <Hidden smDown>
               <MainMenu menuItems={MenuItems} />
             </Hidden>
-            <Box ml={5}>
+            <Box className={classes.iconContainer}>
               <IconButton>
                 {themeState ? (
                   <FontAwesomeIcon

@@ -20,6 +20,11 @@ const styles = (theme) => ({
       fontSize: '18px',
     },
   },
+  iconContainer: {
+    [theme.breakpoints.up('md')]: {
+      marginLeft: '40px',
+    },
+  },
   themeIcon: {
     fontSize: '20px',
     [theme.breakpoints.down('sm')]: {
