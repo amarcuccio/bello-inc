@@ -26,18 +26,22 @@ const Footer = (props) => {
               <FontAwesomeIcon
                 icon={['fab', 'facebook-f']}
                 className={classes.footerIcon}
+                size="lg"
               />
               <FontAwesomeIcon
                 icon={['fab', 'twitter']}
                 className={classes.footerIcon}
+                size="lg"
               />
               <FontAwesomeIcon
                 icon={['fab', 'linkedin-in']}
                 className={classes.footerIcon}
+                size="lg"
               />
               <FontAwesomeIcon
                 icon={'envelope'}
                 className={classes.footerIcon}
+                size="lg"
               />
             </Typography>
           </Grid>
