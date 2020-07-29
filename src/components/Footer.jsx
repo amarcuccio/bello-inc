@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Social from './Social';
+import { SocialSites } from '../config/GeneralConfig';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/FooterStyles';
@@ -21,7 +22,7 @@ const Footer = (props) => {
           >
             <Typography variant="body2">© Copyright Bello & Co Inc.</Typography>
           </Grid>
-          <Social icons={['facebook-f', 'twitter', 'linkedin-in']} />
+          <Social icons={SocialSites} />
         </Grid>
       </Container>
     </div>

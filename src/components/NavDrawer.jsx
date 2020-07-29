@@ -2,7 +2,8 @@ import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
 import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
+import MainMenu from './MainMenu';
+import { MenuItems } from '../config/GeneralConfig';
 import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/NavDrawerStyles';
 
@@ -20,9 +21,7 @@ const NavDrawer = (props) => {
         <Toolbar />
         <div>
           <Container>
-            <Typography variant="h6">
-              navigation items will go here on mobile
-            </Typography>
+            <MainMenu menuItems={MenuItems} />
           </Container>
         </div>
       </Drawer>
