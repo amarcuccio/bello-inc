@@ -8,6 +8,9 @@ const styles = (theme) => ({
       height: '60px',
     },
   },
+  appbar: {
+    zIndex: '1500',
+  },
   title: {
     flexGrow: 1,
     [theme.breakpoints.down('sm')]: {

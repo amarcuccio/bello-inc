@@ -21,15 +21,9 @@ const Navbar = (props) => {
 
   return (
     <div className={classes.root}>
-      {isOpen && (
-        <NavDrawer
-          themeState={themeState}
-          open={isOpen}
-          close={handleSetOpen}
-        />
-      )}
+      {isOpen && <NavDrawer open={isOpen} close={handleSetOpen} />}
       <HeaderElevation {...props}>
-        <AppBar>
+        <AppBar className={classes.appbar}>
           <Container>
             <Toolbar className={classes.toolbar}>
               <Hidden mdUp>

@@ -9,6 +9,10 @@ const BelloLight = createMuiTheme({
       main: '#228B22',
     },
     type: 'light',
+    background: {
+      default: '#FAFAFA',
+      paper: '#FAFAFA',
+    },
   },
 });
 
