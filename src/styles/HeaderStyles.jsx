@@ -1,4 +1,9 @@
 const styles = (theme) => ({
+  backToTop: {
+    position: 'fixed',
+    bottom: theme.spacing(5),
+    right: theme.spacing(3),
+  },
   root: {
     display: 'flex',
   },
@@ -8,7 +13,9 @@ const styles = (theme) => ({
       height: '60px',
     },
     borderBottom:
-      theme.palette.type === 'light' ? '1px solid black' : '1px solid #EDEEEE',
+      theme.palette.type === 'light'
+        ? '1px solid #1F232D'
+        : '1px solid #EDEEEE',
   },
   appbar: {
     zIndex: '1500',

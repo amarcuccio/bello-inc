@@ -1,4 +1,7 @@
 import React from 'react';
+import ScrollToTop from './ScrollToTop';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import NavDrawer from './NavDrawer';
 import AppBar from '@material-ui/core/AppBar';
 import Container from '@material-ui/core/Container';
@@ -41,7 +44,7 @@ const Header = (props) => {
               <Hamburger
                 distance="sm"
                 size="28"
-                color={themeState ? '#EDEEEE' : '#000000'}
+                color={themeState ? '#EDEEEE' : '#1F232D'}
                 toggled={drawerState}
                 toggle={drawerHandler}
                 aria-label="Open/close navigation drawer."
@@ -79,7 +82,12 @@ const Header = (props) => {
           </Toolbar>
         </Container>
       </AppBar>
-      <Toolbar />
+      <Toolbar id="back-to-top-anchor" />
+      <ScrollToTop {...props}>
+        <Fab size="medium" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollToTop>
     </div>
   );
 };
