@@ -51,7 +51,6 @@ const Header = (props) => {
             <Typography
               component={NavLink}
               to={'/'}
-              variant="h6"
               aria-label={'Home'}
               className={classes.title}
               onClick={!isDesktop && drawerState ? drawerHandler : null}

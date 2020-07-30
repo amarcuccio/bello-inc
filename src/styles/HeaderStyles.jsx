@@ -16,9 +16,10 @@ const styles = (theme) => ({
   title: {
     flexGrow: 1,
     textDecoration: 'none',
+    fontSize: '1.75rem',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
-      fontSize: '18px',
+      fontSize: '22px',
     },
     '&:link, &:visited, &:focus, &:hover, &:active': {
       color: theme.palette.type === 'light' ? '#1F232D' : '#FAFAFA',

@@ -20,6 +20,7 @@ const BelloDark = createMuiTheme({
   palette: {
     primary: {
       main: '#1F232D',
+      contrastText: '#EDEEEE',
     },
     secondary: {
       main: '#228B22',
