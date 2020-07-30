@@ -4,6 +4,14 @@ const MenuItems = [
   { id: 'projects', display: 'Projects', url: '/projects' },
   { id: 'contact', display: 'Contact Us', url: '/contact' },
 ];
-const SocialSites = ['facebook-f', 'twitter', 'linkedin-in'];
+const SocialSites = [
+  {
+    id: 'facebook',
+    icon: 'facebook-f',
+    url: 'https://www.facebook.com/BelloCoInc',
+  },
+  { id: 'twitter', icon: 'twitter', url: '' },
+  { id: 'linkedin', icon: 'linkedin-in', url: '' },
+];
 
 export { MenuItems, SocialSites };

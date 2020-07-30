@@ -22,7 +22,7 @@ const Footer = (props) => {
           >
             <Typography variant="body2">© Copyright Bello & Co Inc.</Typography>
           </Grid>
-          <Social icons={SocialSites} />
+          <Social sites={SocialSites} />
         </Grid>
       </Container>
     </div>
