@@ -34,7 +34,7 @@ const Header = (props) => {
           isDesktop={isDesktop}
         />
       )}
-      <AppBar position="sticky" className={classes.appbar} elevation={0}>
+      <AppBar position="fixed" className={classes.appbar} elevation={0}>
         <Container>
           <Toolbar className={classes.toolbar}>
             <Hidden mdUp>
@@ -79,6 +79,7 @@ const Header = (props) => {
           </Toolbar>
         </Container>
       </AppBar>
+      <Toolbar />
     </div>
   );
 };
