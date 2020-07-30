@@ -7,7 +7,7 @@ const styles = (theme) => ({
   footerLinks: {
     textDecoration: 'none',
     '&:link, &:visited, &:focus, &:hover, &:active': {
-      color: theme.palette.type === 'light' ? '#1F232D' : '#FAFAFA',
+      color: theme.palette.type === 'light' ? '#1F232D' : '#EDEEEE',
     },
   },
   footerIcon: {

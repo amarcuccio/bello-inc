@@ -41,7 +41,7 @@ const Header = (props) => {
               <Hamburger
                 distance="sm"
                 size="28"
-                color={themeState ? '#FFFFFF' : '#000000'}
+                color={themeState ? '#EDEEEE' : '#000000'}
                 toggled={drawerState}
                 toggle={drawerHandler}
                 aria-label="Open/close navigation drawer."

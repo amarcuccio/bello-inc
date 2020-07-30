@@ -8,7 +8,7 @@ const styles = (theme) => ({
       height: '60px',
     },
     borderBottom:
-      theme.palette.type === 'light' ? '1px solid black' : '1px solid white',
+      theme.palette.type === 'light' ? '1px solid black' : '1px solid #EDEEEE',
   },
   appbar: {
     zIndex: '1500',
@@ -22,7 +22,7 @@ const styles = (theme) => ({
       fontSize: '22px',
     },
     '&:link, &:visited, &:focus, &:hover, &:active': {
-      color: theme.palette.type === 'light' ? '#1F232D' : '#FAFAFA',
+      color: theme.palette.type === 'light' ? '#1F232D' : '#EDEEEE',
     },
   },
   iconContainer: {

@@ -2,7 +2,7 @@ const styles = (theme) => ({
   grid: {
     padding: theme.spacing(3, 2),
     borderTop:
-      theme.palette.type === 'light' ? '1px solid black' : '1px solid white',
+      theme.palette.type === 'light' ? '1px solid black' : '1px solid #EDEEEE',
   },
   copyright: {
     [theme.breakpoints.down('sm')]: {
