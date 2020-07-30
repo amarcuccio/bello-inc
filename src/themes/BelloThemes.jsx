@@ -2,6 +2,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 const BelloLight = createMuiTheme({
   palette: {
+    type: 'light',
     text: {
       primary: '#1A202C',
     },
@@ -11,7 +12,6 @@ const BelloLight = createMuiTheme({
     secondary: {
       main: '#228B22',
     },
-    type: 'light',
     background: {
       default: '#EDEEEE',
       paper: '#EDEEEE',
@@ -21,6 +21,7 @@ const BelloLight = createMuiTheme({
 
 const BelloDark = createMuiTheme({
   palette: {
+    type: 'dark',
     text: {
       primary: '#EDEEEE',
     },
@@ -31,7 +32,6 @@ const BelloDark = createMuiTheme({
     secondary: {
       main: '#228B22',
     },
-    type: 'dark',
     background: {
       default: '#1A202C',
       paper: '#1A202C',
