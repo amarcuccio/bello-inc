@@ -8,6 +8,7 @@ This repo holds the code for Bello & Co's upcoming website.
 - [React](https://reactjs.org/) - JavaScript library.
 - [Material-UI](https://material-ui.com/) - React UI framework.
 - [React Router](https://reactrouter.com/) - React navigational components.
+- [Font Awesome](https://fontawesome.com/) - Iconography across the site.
 
 ## License
 
