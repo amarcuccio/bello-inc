@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/MainMenuStyles';
 
 const MainMenu = (props) => {
-  const { classes, menuItems } = props;
+  const { classes, menuItems, isDesktop, close } = props;
   return (
     <div>
       {menuItems.map((item) => (
@@ -14,6 +14,7 @@ const MainMenu = (props) => {
           to={item.url}
           aria-label={item.display}
           className={classes.navItem}
+          onClick={!isDesktop ? close : null}
         >
           <Button>{item.display}</Button>
         </NavLink>

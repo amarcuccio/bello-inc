@@ -57,6 +57,7 @@ const App = (props) => {
             themeHandler={handleThemeChange}
             drawerState={isOpen}
             drawerHandler={handleSetOpen}
+            isDesktop={isDesktop}
           />
           <div className={classes.root}>
             <Switch>

@@ -8,7 +8,7 @@ import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/NavDrawerStyles';
 
 const NavDrawer = (props) => {
-  const { classes, open, close } = props;
+  const { classes, open, close, isDesktop } = props;
   return (
     <div>
       <Drawer
@@ -21,7 +21,11 @@ const NavDrawer = (props) => {
         <Toolbar />
         <div>
           <Container>
-            <MainMenu menuItems={MenuItems} />
+            <MainMenu
+              menuItems={MenuItems}
+              isDesktop={isDesktop}
+              close={close}
+            />
           </Container>
         </div>
       </Drawer>

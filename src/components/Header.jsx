@@ -22,11 +22,18 @@ const Header = (props) => {
     drawerHandler,
     themeState,
     themeHandler,
+    isDesktop,
   } = props;
 
   return (
     <div className={classes.root}>
-      {drawerState && <NavDrawer open={drawerState} close={drawerHandler} />}
+      {drawerState && (
+        <NavDrawer
+          open={drawerState}
+          close={drawerHandler}
+          isDesktop={isDesktop}
+        />
+      )}
       <AppBar position="sticky" className={classes.appbar} elevation={0}>
         <Container>
           <Toolbar className={classes.toolbar}>
