@@ -7,17 +7,18 @@ import styles from '../styles/MobileMenuStyles';
 const MobileMenu = (props) => {
   const { classes, menuItems, isDesktop, close } = props;
   return (
-    <div>
+    <div className={classes.root}>
       {menuItems.map((item) => (
-        <NavLink
-          key={item.id}
-          to={item.url}
-          aria-label={item.display}
-          className={classes.navItem}
-          onClick={!isDesktop ? close : null}
-        >
-          <Button>{item.display}</Button>
-        </NavLink>
+        <div key={item.id} className={classes.navItems}>
+          <NavLink
+            to={item.url}
+            aria-label={item.display}
+            className={classes.navItem}
+            onClick={!isDesktop ? close : null}
+          >
+            <Button size="large">{item.display}</Button>
+          </NavLink>
+        </div>
       ))}
     </div>
   );
