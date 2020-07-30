@@ -15,9 +15,13 @@ const styles = (theme) => ({
   },
   title: {
     flexGrow: 1,
+    textDecoration: 'none',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
       fontSize: '18px',
+    },
+    '&:link, &:visited, &:focus, &:hover, &:active': {
+      color: theme.palette.type === 'light' ? '#1F232D' : '#FAFAFA',
     },
   },
   iconContainer: {

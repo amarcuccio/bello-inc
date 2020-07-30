@@ -6,7 +6,12 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { BelloLight, BelloDark } from './themes/BelloThemes';
 import Header from './components/Header';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import Services from './pages/Services';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -46,16 +51,34 @@ const App = (props) => {
     <>
       <ThemeProvider theme={darkState ? BelloDark : BelloLight}>
         <CssBaseline />
-        <Header
-          themeState={darkState}
-          themeHandler={handleThemeChange}
-          drawerState={isOpen}
-          drawerHandler={handleSetOpen}
-        />
-        <div className={classes.root}>
-          <Home />
-          <Footer />
-        </div>
+        <Router>
+          <Header
+            themeState={darkState}
+            themeHandler={handleThemeChange}
+            drawerState={isOpen}
+            drawerHandler={handleSetOpen}
+          />
+          <div className={classes.root}>
+            <Switch>
+              <Route exact path="/about">
+                <About />
+              </Route>
+              <Route exact path="/contact">
+                <Contact />
+              </Route>
+              <Route exact path="/projects">
+                <Projects />
+              </Route>
+              <Route exact path="/services">
+                <Services />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
       </ThemeProvider>
     </>
   );

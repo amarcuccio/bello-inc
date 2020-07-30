@@ -7,6 +7,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
 import { Squeeze as Hamburger } from 'hamburger-react';
+import { NavLink } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import MainMenu from './MainMenu';
 import { MenuItems } from '../config/GeneralConfig';
@@ -39,9 +40,17 @@ const Header = (props) => {
                 aria-label="Open/close navigation drawer."
               />
             </Hidden>
-            <Typography variant="h6" className={classes.title}>
+
+            <Typography
+              component={NavLink}
+              to={'/'}
+              variant="h6"
+              aria-label={'Home'}
+              className={classes.title}
+            >
               Bello & Co Inc.
             </Typography>
+
             <Hidden smDown>
               <MainMenu menuItems={MenuItems} />
             </Hidden>
