@@ -54,6 +54,7 @@ const Header = (props) => {
               variant="h6"
               aria-label={'Home'}
               className={classes.title}
+              onClick={!isDesktop && drawerState ? drawerHandler : null}
             >
               Bello & Co Inc.
             </Typography>
