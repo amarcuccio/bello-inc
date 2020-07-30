@@ -22,10 +22,11 @@ const Header = (props) => {
     themeState,
     themeHandler,
   } = props;
+
   return (
     <div className={classes.root}>
       {drawerState && <NavDrawer open={drawerState} close={drawerHandler} />}
-      <AppBar className={classes.appbar} elevation={0}>
+      <AppBar position="sticky" className={classes.appbar} elevation={0}>
         <Container>
           <Toolbar className={classes.toolbar}>
             <Hidden mdUp>

@@ -10,8 +10,8 @@ import styles from '../styles/FooterStyles';
 const Footer = (props) => {
   const { classes } = props;
   return (
-    <div className={classes.root}>
-      <Container className={classes.footer}>
+    <div>
+      <Container>
         <Grid container justify="space-between" className={classes.grid}>
           <Grid
             item

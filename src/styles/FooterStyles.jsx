@@ -1,12 +1,4 @@
 const styles = (theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-  },
-  footer: {
-    marginTop: 'auto',
-  },
   grid: {
     padding: theme.spacing(3, 2),
     borderTop:
