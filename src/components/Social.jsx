@@ -23,6 +23,8 @@ const Social = (props) => {
               icon={['fab', site.icon]}
               className={classes.footerIcon}
               size="lg"
+              alt={site.id}
+              title={site.id}
             />
           </Link>
         ))}
