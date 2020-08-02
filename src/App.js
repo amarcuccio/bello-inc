@@ -13,13 +13,8 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Services from './pages/Services';
 import Footer from './components/Footer';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles/AppStyles';
-
-library.add(fab, faSun, faMoon);
 
 const App = (props) => {
   const [darkState, setDarkState] = useState(false);

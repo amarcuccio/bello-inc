@@ -20,7 +20,11 @@ const Social = (props) => {
             className={classes.footerLinks}
           >
             <FontAwesomeIcon
-              icon={['fab', site.icon]}
+              icon={
+                site.icon === 'envelope'
+                  ? ['fas', site.icon]
+                  : ['fab', site.icon]
+              }
               className={classes.footerIcon}
               size="lg"
               alt={site.id}
