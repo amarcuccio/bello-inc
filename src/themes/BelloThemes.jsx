@@ -4,17 +4,17 @@ const BelloLight = createMuiTheme({
   palette: {
     type: 'light',
     text: {
-      primary: '#1A202C',
+      primary: '#000000',
     },
     primary: {
-      main: '#EDEEEE',
+      main: '#FFFFFF',
     },
     secondary: {
       main: '#228B22',
     },
     background: {
-      default: '#EDEEEE',
-      paper: '#EDEEEE',
+      default: '#FFFFFF',
+      paper: '#FFFFFF',
     },
   },
 });
@@ -23,18 +23,18 @@ const BelloDark = createMuiTheme({
   palette: {
     type: 'dark',
     text: {
-      primary: '#EDEEEE',
+      primary: '#DDDDDD',
     },
     primary: {
-      main: '#1A202C',
-      contrastText: '#EDEEEE',
+      main: '#1D1D1F',
+      contrastText: '#DDDDDD',
     },
     secondary: {
       main: '#228B22',
     },
     background: {
-      default: '#1A202C',
-      paper: '#1A202C',
+      default: '#1D1D1F',
+      paper: '#1D1D1F',
     },
   },
 });
