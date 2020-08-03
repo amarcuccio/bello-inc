@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import styles from '../styles/MobileMenuStyles';
+import styles from '../styles/MainMenuStyles';
 
-const MobileMenu = (props) => {
+const MainMenu = (props) => {
   const { classes, menuItems, isDesktop, close } = props;
   return (
     <div>
@@ -15,12 +15,13 @@ const MobileMenu = (props) => {
           aria-label={item.display}
           className={classes.navItem}
           onClick={!isDesktop ? close : null}
+          activeClassName={classes.active}
         >
-          <Button>{item.display}</Button>
+          <Typography variant="button">{item.display}</Typography>
         </NavLink>
       ))}
     </div>
   );
 };
 
-export default withStyles(styles)(MobileMenu);
+export default withStyles(styles)(MainMenu);

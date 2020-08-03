@@ -12,10 +12,9 @@ const styles = (theme) => ({
     [theme.breakpoints.down('sm')]: {
       height: '60px',
     },
-    borderBottom:
-      theme.palette.type === 'light'
-        ? '1px solid #1F232D'
-        : '1px solid #EDEEEE',
+    borderBottomStyle: 'solid',
+    borderColor: theme.palette.text.primary,
+    borderWidth: '1px',
   },
   appbar: {
     zIndex: '1500',
@@ -29,7 +28,7 @@ const styles = (theme) => ({
       fontSize: '22px',
     },
     '&:link, &:visited, &:focus, &:hover, &:active': {
-      color: theme.palette.type === 'light' ? '#1F232D' : '#EDEEEE',
+      color: theme.palette.text.primary,
     },
   },
   iconContainer: {

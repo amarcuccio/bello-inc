@@ -1,8 +1,9 @@
 const styles = (theme) => ({
   grid: {
     padding: theme.spacing(3, 2),
-    borderTop:
-      theme.palette.type === 'light' ? '1px solid black' : '1px solid #EDEEEE',
+    borderTopStyle: 'solid',
+    borderColor: theme.palette.text.main,
+    borderWidth: '1px',
   },
   copyright: {
     [theme.breakpoints.down('sm')]: {
