@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import styles from '../styles/MobileMenuStyles';
 
@@ -15,8 +15,9 @@ const MobileMenu = (props) => {
             aria-label={item.display}
             className={classes.navItem}
             onClick={!isDesktop ? close : null}
+            activeClassName={classes.active}
           >
-            <Button size="large">{item.display}</Button>
+            <Typography variant="button">{item.display}</Typography>
           </NavLink>
         </div>
       ))}

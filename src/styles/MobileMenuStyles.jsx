@@ -1,6 +1,9 @@
 const styles = (theme) => ({
   navItem: {
     textDecoration: 'none',
+    color: theme.palette.text.primary,
+    fontWeight: 'bold',
+    padding: '10px 8px',
   },
   root: {
     display: 'flex',
@@ -10,7 +13,12 @@ const styles = (theme) => ({
     height: '100%',
   },
   navItems: {
-    margin: '1rem 0 1rem 0',
+    margin: '2rem 0 2rem 0',
+  },
+  active: {
+    borderBottomStyle: 'solid',
+    borderColor: theme.palette.secondary.main,
+    borderWidth: '2px',
   },
 });
 
