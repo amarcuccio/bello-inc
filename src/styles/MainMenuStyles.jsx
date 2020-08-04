@@ -7,7 +7,7 @@ const styles = (theme) => ({
   },
   active: {
     borderBottomStyle: 'solid',
-    borderColor: theme.palette.secondary.main,
+    borderColor: theme.palette.text.primary,
     borderWidth: '2px',
   },
 });
