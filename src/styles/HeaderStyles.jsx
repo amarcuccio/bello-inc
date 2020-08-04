@@ -45,6 +45,14 @@ const styles = (theme) => ({
       cursor: 'pointer',
     },
   },
+  scrollTop: {
+    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.text.primary,
+    '&:hover': {
+      color: theme.palette.primary.main,
+      backgroundColor: theme.palette.text.primary,
+    },
+  },
 });
 
 export default styles;

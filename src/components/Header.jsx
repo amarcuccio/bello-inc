@@ -84,7 +84,11 @@ const Header = (props) => {
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
       <ScrollToTop {...props}>
-        <Fab size="medium" aria-label="scroll back to top">
+        <Fab
+          className={classes.scrollTop}
+          size="medium"
+          aria-label="scroll back to top"
+        >
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollToTop>

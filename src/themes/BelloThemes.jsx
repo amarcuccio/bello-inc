@@ -4,10 +4,11 @@ const BelloLight = createMuiTheme({
   palette: {
     type: 'light',
     text: {
-      primary: '#000000',
+      primary: '#18191A',
     },
     primary: {
       main: '#FFFFFF',
+      contrastText: '#18191A',
     },
     secondary: {
       main: '#228B22',
