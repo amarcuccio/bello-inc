@@ -6,13 +6,12 @@ This repo holds the code for Bello & Co's upcoming website.
 
 - [ ] Improve the mobile nav drawer animation.
 - [ ] Set cookie when user overrides theme selection.
-- [ ] Style the 'back-to-top' button per theme.
 - [ ] Create a 404 page for bad routing.
-- [ ] Tweak light/dark theme color schemes.
 - [ ] Add green accent color to applicable elements.
 - [ ] Insert logo, favicon, apple touch icon when logo is available.
 - [ ] Refactor routes into separate config component.
 - [ ] Refactor state (theme, drawer) into separate config component.
+- [ ] Change to TypeScript?
 
 ## Built With
 
