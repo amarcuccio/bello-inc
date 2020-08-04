@@ -6,7 +6,7 @@ This repo holds the code for Bello & Co's upcoming website.
 
 - [ ] Improve the mobile nav drawer animation.
 - [ ] Set cookie when user overrides theme selection.
-- [ ] Style active link in header.
+- [ ] Style the 'back-to-top' button per theme.
 - [ ] Create a 404 page for bad routing.
 - [ ] Tweak light/dark theme color schemes.
 - [ ] Add green accent color to applicable elements.
