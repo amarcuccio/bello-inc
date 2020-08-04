@@ -9,6 +9,7 @@ This repo holds the code for Bello & Co's upcoming website.
 - [ ] Style active link in header.
 - [ ] Create a 404 page for bad routing.
 - [ ] Tweak light/dark theme color schemes.
+- [ ] Add green accent color to applicable elements.
 - [ ] Insert logo, favicon, apple touch icon when logo is available.
 - [ ] Refactor routes into separate config component.
 - [ ] Refactor state (theme, drawer) into separate config component.
