@@ -27,15 +27,15 @@ const BelloDark = createMuiTheme({
       primary: '#DDDDDD',
     },
     primary: {
-      main: '#131313',
+      main: '#111111',
       contrastText: '#DDDDDD',
     },
     secondary: {
       main: '#228B22',
     },
     background: {
-      default: '#131313',
-      paper: '#131313',
+      default: '#111111',
+      paper: '#111111',
     },
   },
 });
