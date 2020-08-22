@@ -1,6 +1,6 @@
 {
-  "name": "bello-co",
-  "homepage": "https://beta.belloco.ca",
+  "name": "bello-inc",
+  "homepage": "https://beta.belloinc.ca",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "use-light-switch": "^1.0.1"
   },
   "scripts": {

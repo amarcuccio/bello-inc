@@ -1,6 +1,6 @@
-# Bello & Co Inc.
+# Bello Inc.
 
-This repo holds the code for Bello & Co's upcoming website.
+This repo holds the code for Bello Inc's upcoming website.
 
 ## Task List
 

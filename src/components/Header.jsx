@@ -58,7 +58,7 @@ const Header = (props) => {
               className={classes.title}
               onClick={!isDesktop && drawerState ? drawerHandler : null}
             >
-              Bello & Co Inc.
+              Bello Inc.
             </Typography>
 
             <Hidden smDown>

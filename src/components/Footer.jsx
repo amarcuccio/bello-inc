@@ -20,7 +20,7 @@ const Footer = (props) => {
             align="center"
             className={classes.copyright}
           >
-            <Typography variant="body2">© Copyright Bello & Co Inc.</Typography>
+            <Typography variant="body2">© Copyright Bello Inc.</Typography>
           </Grid>
           <Social sites={SocialSites} />
         </Grid>
